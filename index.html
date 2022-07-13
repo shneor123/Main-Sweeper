@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="img/flag-icon.png" type="image/x-icon" />
+</head>
+
+<body onload="init()">
+
+    <div>
+        <h1>Mine Sweeper <img src="img/mine-icon.png" alt="" /></h1>
+        <h2>Choose Level</h2>
+        <button class="btn btn-lvl" onclick="chooseLevel(4,2)">Easy(16)</button>
+        <button class="btn btn-lvl" onclick="chooseLevel(8,12)"> Medium(64)</button>
+        <button class="btn btn-lvl" onclick="chooseLevel(12,30)">Hard(144)</button>
+    </div>
+    <br />
+    <div class="ui">
+        <div alt="help" title="Toggle lives, tip: on easy mode you get 2 lives" class="lives">
+            <input onclick="toggleLives(this, event)" checked type="checkbox" />
+            Lives:
+        </div>
+        <span class="timer"></span>
+        <span class="best-time">Best time:</span>
+    </div>
+    <div>
+        <a href="#" class="tip"> ? <span>Lets you take a short glimpse at a cell and it's neighbours</span></a>
+        <button class="hint" onclick="turnOnHint(this)"> Use hint(3)</button>
+    </div>
+    <div class=""></div>
+    <div class="board-container"></div>
+
+    <div class="floor-tile"></div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+
+    <footer>
+        Made by Shneor Rabinovitz at coding academy
+    </footer>
+
+</body>
+
+</html>
